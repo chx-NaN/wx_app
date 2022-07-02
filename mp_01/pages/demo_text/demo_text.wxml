@@ -1,0 +1,8 @@
+<!--pages/demo_text/demo_text.wxml-->
+<!-- <text>pages/demo_text/demo_text.wxml</text> -->
+<view>
+  <text user-select>手机号支持长按选中效果13800005056</text>
+</view>
+
+<rich-text nodes="<h1 style='color: red;'>标题</h1>"></rich-text>
+
