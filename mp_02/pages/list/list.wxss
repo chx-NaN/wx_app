@@ -1,0 +1,8 @@
+/* pages/list/list.wxss */
+input {
+  border: 1px solid lightblue;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 3px;
+}
+

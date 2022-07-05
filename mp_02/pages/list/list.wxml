@@ -1,0 +1,51 @@
+<!--pages/list/list.wxml-->
+<!-- <text>pages/list/list.wxml</text> -->
+
+<!-- 动态绑定内容 -->
+<view>{{ info }}</view>
+
+<!-- 动态绑定属性 -->
+<image src="{{imgSrc}}" mode="widthFix"></image>
+
+<!-- 三元运算 -->
+<view>{{ randomNum >= 5 ? '随机数字大于等于5' : '随机数字小于5' }}</view>
+
+<!-- 算数运算 -->
+<view>生成100以内的随机数：{{ randomNum1 * 100 }}</view>
+
+<!-- 事件绑定 -->
+<button type="primary" bindtap="btnTapHeader">按钮</button>
+<button type="primary" bindtap="ChangeCount">+1</button>
+<button type="primary" bindtap="btnTap2" data-info="{{2}}">+2</button>
+
+<input type="text" value="{{msg}}" bindinput="inputHeader"/>
+
+<!-- 条件渲染 -->
+<!-- 1. wx:if -->
+<view wx:if="{{condition}}">True</view>
+<view wx:if="{{type === 1}}"> 男 </view>
+<view wx:elif="{{type === 2}}"> 女 </view>
+<view wx:else> 保密 </view>
+
+<!-- 2.结合<block>使用wx:if -->
+<block wx:if="{{true}}">
+  <view> view1 </view>
+  <view> view2 </view>
+</block>
+
+<!-- 3.hidden -->
+<view hidden="{{0}}">条件为 true 隐藏，条件为 false 显示</view>
+
+<!-- 列表渲染 -->
+<!-- 1. wx.for -->
+<view wx:for="{{[1,2,3]}}">
+  索引是：{{ index }} 当前项是：{{ item }}
+</view>
+
+<!-- 2. 手动指定索引和当前项的变量名 -->
+  <view wx:for="{{[1,2,3]}}" wx:for-index="idx" wx:for-item="itemName">
+    索引是：{{ idx }} 当前项是：{{ itemName }}
+  </view>
+
+<!-- 3. wx:key的使用 -->
+<view wx:for="{{userList}}" wx:key="id">{{item.name}}</view>
