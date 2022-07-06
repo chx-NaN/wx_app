@@ -50,6 +50,6 @@
 <button type="warn" size="mini" plain>警告按钮</button> -->
 
 <!-- image组件的基本使用 -->
-<image></image>
-<image src="/image/1.png" mode="heightFix"></image>
+<!-- <image></image>
+<image src="/image/1.png" mode="heightFix"></image> -->
 
