@@ -1,0 +1,24 @@
+<!--pages/list/list.wxml-->
+<!-- <text>pages/list/list.wxml</text> -->
+
+<!-- 声明式导航 -->
+<!-- 1. 导航到 tabBar 页面 -->
+<navigator url="/pages/message/message" open-type="switchTab">导航到消息页面</navigator>
+<!-- 2. 导航到非 tabBar 页面 -->
+<navigator url="/pages/info/info" open-type="navigate">导航到info页面</navigator>
+<!-- 3.后退导航 -->
+<navigator open-type="navigateBack" delta="1">返回上一页</navigator>
+
+<!-- 编程式导航 -->
+<!-- 1. 导航到 tabBar 页面 -->
+<button bindtap="gotoMessage">跳转到消息页面</button>
+<!-- 2. 导航到非 tabBar 页面 -->
+<button bindtap="gotoInfo">跳转到 info 页面</button>
+<!-- 3.后退导航 -->
+<button bindtap="gotoBack">返回到上一页</button>
+
+<!-- 导航传参 -->
+<!-- 1. 声明式导航传参 -->
+<navigator url="/pages/info/info?name=zs&age=22">跳转到 info 页面</navigator>
+<!-- 2. 编程式导航传参 -->
+<button bindtap="gotoInfo2">跳转到 info2 页面</button>
